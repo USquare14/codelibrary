@@ -7,7 +7,7 @@ public class SegmentTreeSimple {
 	public static void add(int[] t, int i, int value) {
 		i += t.length / 2;
 		t[i] += value;
-		for (; i > 1; i >>= 1)
+		for (; i > 0; i >>= 1)
 			t[i >> 1] = Math.max(t[i], t[i ^ 1]);
 	}
 
